@@ -1,0 +1,26 @@
+{
+  "name": "learn-nodeJS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01-node.js",
+  "dependencies": {
+    "node": "^13.13.0",
+    "nodemailer": "^6.4.6",
+    "require.js": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webProgrammer-wm/learn-NodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webProgrammer-wm/learn-NodeJS/issues"
+  },
+  "homepage": "https://github.com/webProgrammer-wm/learn-NodeJS#readme"
+}
