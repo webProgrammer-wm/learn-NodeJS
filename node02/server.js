@@ -2,6 +2,15 @@ const express = require('express')
 // express 实例化
 const app = express()
 
+const bodyParser = require('body-parser')
+
+// app.use 使用中间件（插件）
+//解析表单数据 x-www.form-urlencode
+app.use(bodyParser.urlencoded({ extended: false }))
+// 解析 json
+app.use(bodyParser.json())
+
+
 // 最简单的 api 接口
 app.get('/user/login', (request, response) => {
   // 接收 get 参数：request.query
@@ -23,9 +32,23 @@ app.get('/user/login', (request, response) => {
   )
 })
 
-app.get('/user/del', (request, response) => {
-  response.send('hehe test')
+app.post('/user/register', ( request, response) => {
+  // 接收 post 数据：消息体，请求体，req.body
+  let {us, ps} = request.body
+
+  console.log(request.body)
+  // express 不能直接解析消息体
+  // 通过第三方的插件实现解析
+  if (us === '123' && ps === '123') {
+    response.send({ err:0, msg: 'ok' })
+  } else {
+    response.send({ err: -1, msg: 'no ok' })
+  }
 })
+
+// app.get('/user/del', (request, response) => {
+//   response.send('hehe test')
+// })
 
 // 监听 3000 端口，开启服务器
 app.listen(3000, () => {

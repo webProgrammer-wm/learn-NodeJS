@@ -51,6 +51,15 @@
 
   
 
+  #### API接口的书写
+
+  - 接收数据
+    - get		request.query
+    - post      request.body 需要 body-parser 插件进行解析
+      - 注意数据格式：json、x-www-form-urencode、formdata
+
+  
+
   #### postman 接口测试
 
   
